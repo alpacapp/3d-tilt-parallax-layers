@@ -1,7 +1,7 @@
 {
     "name": "3D Tilt Parallax Layers",
     "handle": "3d-tilt-parallax-layers",
-    "author": "yassine-bouanane",
+    "author": "alpacapp",
     "category": "media",
     "description": "3D Tilt Parallax Layers Effect. Displays 3D layers that tilt following mouse movement.",
     "entry": "block.liquid",
