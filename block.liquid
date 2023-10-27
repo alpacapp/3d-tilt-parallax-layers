@@ -1,0 +1,23 @@
+<div class="wrapper" alpacapp-element="wrapper" {% if hoverOnly %}data-hoverOnly{% endif %}>
+  {% for i in (1..8) %}
+    {% assign link = "link" | append: i | get %}
+    {% assign image = "image" | append: i | get %}
+    {% unless image %}{% continue %}{% endunless %}
+    {% assign scale = "scale" | append: i | get %}
+    {% assign xPosition = "xPosition" | append: i | get %}
+    {% assign yPosition = "yPosition" | append: i | get %}
+    {% assign zDistance = "zDistance" | append: i | get %}
+    {% capture styleVal %}
+      --scale:{{ scale }}%;--xPosition:{{ xPosition }}%;--yPosition:{{ yPosition }}%;--zDistance:{{ zDistance }}px;
+    {% endcapture %}
+    <div class="layer" style="{{ styleVal | if: i, '!=', 1 }}" data-i="{{ i }}">
+      {% if link %}
+        <a href="{{ link }}">
+      {% endif %}
+        <img {{ image | image_srcset: scale }} alt="{{ image.alt }}" alpacapp-element="{{ "base-" | if: i, '==', 1 }}layer" />
+      {% if link %}
+        </a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

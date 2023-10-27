@@ -1,0 +1,533 @@
+{
+    "resizable"		: true,
+	"elements"		: [
+      {
+    	"name": "Wrapper",
+    	"handle": "wrapper",
+    	"customizations": "image",
+    	"hoverCustomizations": true,
+      },
+      {
+    	"name": "Base Layer",
+    	"handle": "base-layer",
+    	"customizations": "image",
+    	"hoverCustomizations": true,
+    	"activeCustomizations": true
+      },
+      {
+    	"name": "Layer",
+    	"handle": "layer",
+    	"customizations": "image",
+    	"hoverCustomizations": true,
+    	"activeCustomizations": true,
+    	"defaultsHover": {"opacity":90, "transition":0.2}
+      }
+	],
+	"properties"	: [
+		{
+			"name"			: "Initiate effect only during mouse hover",
+			"variable"		: "hoverOnly",
+			"type"			: "checkbox",
+			"default"		: false
+		},
+		{
+			"name"			: "Zoom-in during hover",
+			"variable"		: "zoomIn",
+			"type"			: "slider",
+            "cssVariable"	: true,
+			"default"		: 5,
+            "min"			: 0,
+            "max"			: 50,
+			"integer"		: true,
+            "unit"			: "%",
+		},
+		{
+			"name"			: "Perspective Amount",
+			"variable"		: "perspective",
+			"type"			: "slider",
+            "cssVariable"	: true,
+			"default"		: 4,
+            "min"			: 1,
+            "max"			: 10,
+            "integer"		: true
+		},
+		{
+			"name"			: "Tilt Amount",
+			"variable"		: "tilt",
+			"type"			: "slider",
+            "cssVariable"	: true,
+			"default"		: 2,
+            "min"			: 1,
+            "max"			: 6
+		},
+        {
+			"name"			: "Horizontal Tilt Direction",
+			"variable"		: "tiltX",
+			"type"			: "dropdown",
+			"default"		: "normal",
+			"options"		: [
+				{
+					"name"	: "Normal",
+					"value"	: "normal"
+				},
+				{
+					"name"	: "None",
+					"value"	: "none"
+				},
+				{
+					"name"	: "Reverse",
+					"value"	: "reverse"
+				}
+			]
+		},
+        {
+			"name"			: "Vertical Tilt Direction",
+			"variable"		: "tiltY",
+			"type"			: "dropdown",
+			"default"		: "normal",
+			"options"		: [
+				{
+					"name"	: "Normal",
+					"value"	: "normal"
+				},
+				{
+					"name"	: "None",
+					"value"	: "none"
+				},
+				{
+					"name"	: "Reverse",
+					"value"	: "reverse"
+				}
+			]
+		},
+        {
+          "name": "Base Layer",
+          "type": "section",
+          "collapsed": false,
+          "fields"		: [
+            {
+    			"name"			: "Image",
+    			"variable"		: "image1",
+    			"type"			: "image",
+                "default"		: "https://sktch.io/images/editor/editor.png"
+    		},
+    		{
+    			"name"			: "Link (optional)",
+    			"variable"		: "link1",
+    			"type"			: "url",
+    			"default"		: ""
+    		},
+          ]
+        },
+        		{
+		  "name": "Layer 2",
+		  "type": "section",
+		  "collapsed": false,
+		  "fields"		: [
+			{
+				"name"			: "Image",
+				"variable"		: "image2",
+				"type"			: "image",
+				"default"		: "https://sktch.io/images/editor/sizing.png"
+			},
+			{
+				"name"			: "Link (optional)",
+				"variable"		: "link2",
+				"type"			: "url",
+				"default"		: ""
+			},
+			{
+				"name"			: "Scale",
+				"variable"		: "scale2",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 25,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "X-Position",
+				"variable"		: "xPosition2",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 85,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Y-Position",
+				"variable"		: "yPosition2",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 23,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Z-Distance",
+				"variable"		: "zDistance2",
+				"type"			: "slider",
+				"unit"			: "px",
+				"default"		: 255,
+				"min"			: 0,
+				"max"			: 400,
+				"integer"		: true
+			}
+		  ]
+		},
+		{
+		  "name": "Layer 3",
+		  "type": "section",
+		  "collapsed": false,
+		  "fields"		: [
+			{
+				"name"			: "Image",
+				"variable"		: "image3",
+				"type"			: "image",
+				"default"		: "https://sktch.io/images/editor/effects.png"
+			},
+			{
+				"name"			: "Link (optional)",
+				"variable"		: "link3",
+				"type"			: "url",
+				"default"		: ""
+			},
+			{
+				"name"			: "Scale",
+				"variable"		: "scale3",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 65,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "X-Position",
+				"variable"		: "xPosition3",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 83,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Y-Position",
+				"variable"		: "yPosition3",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 70,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Z-Distance",
+				"variable"		: "zDistance3",
+				"type"			: "slider",
+				"unit"			: "px",
+				"default"		: 110,
+				"min"			: 0,
+				"max"			: 300,
+				"integer"		: true
+			}
+		  ]
+		},
+		{
+		  "name": "Layer 4",
+		  "type": "section",
+		  "collapsed": true,
+		  "fields"		: [
+			{
+				"name"			: "Image",
+				"variable"		: "image4",
+				"type"			: "image",
+                "default"		: "https://sktch.io/images/editor/add-menu.png"
+			},
+			{
+				"name"			: "Link (optional)",
+				"variable"		: "link4",
+				"type"			: "url",
+				"default"		: ""
+			},
+			{
+				"name"			: "Scale",
+				"variable"		: "scale4",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 80,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "X-Position",
+				"variable"		: "xPosition4",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 20,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Y-Position",
+				"variable"		: "yPosition4",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Z-Distance",
+				"variable"		: "zDistance4",
+				"type"			: "slider",
+				"unit"			: "px",
+				"default"		: 150,
+				"min"			: 0,
+				"max"			: 300,
+				"integer"		: true
+			}
+		  ]
+		},
+		{
+		  "name": "Layer 5",
+		  "type": "section",
+		  "collapsed": true,
+		  "fields"		: [
+			{
+				"name"			: "Image",
+				"variable"		: "image5",
+				"type"			: "image"
+			},
+			{
+				"name"			: "Link (optional)",
+				"variable"		: "link5",
+				"type"			: "url",
+				"default"		: ""
+			},
+			{
+				"name"			: "Scale",
+				"variable"		: "scale5",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 25,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "X-Position",
+				"variable"		: "xPosition5",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Y-Position",
+				"variable"		: "yPosition5",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Z-Distance",
+				"variable"		: "zDistance5",
+				"type"			: "slider",
+				"unit"			: "px",
+				"default"		: 30,
+				"min"			: 0,
+				"max"			: 300,
+				"integer"		: true
+			}
+		  ]
+		},
+		{
+		  "name": "Layer 6",
+		  "type": "section",
+		  "collapsed": true,
+		  "fields"		: [
+			{
+				"name"			: "Image",
+				"variable"		: "image6",
+				"type"			: "image"
+			},
+			{
+				"name"			: "Link (optional)",
+				"variable"		: "link6",
+				"type"			: "url",
+				"default"		: ""
+			},
+			{
+				"name"			: "Scale",
+				"variable"		: "scale6",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 25,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "X-Position",
+				"variable"		: "xPosition6",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Y-Position",
+				"variable"		: "yPosition6",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Z-Distance",
+				"variable"		: "zDistance6",
+				"type"			: "slider",
+				"unit"			: "px",
+				"default"		: 30,
+				"min"			: 0,
+				"max"			: 300,
+				"integer"		: true
+			}
+		  ]
+		},
+		{
+		  "name": "Layer 7",
+		  "type": "section",
+		  "collapsed": true,
+		  "fields"		: [
+			{
+				"name"			: "Image",
+				"variable"		: "image7",
+				"type"			: "image"
+			},
+			{
+				"name"			: "Link (optional)",
+				"variable"		: "link7",
+				"type"			: "url",
+				"default"		: ""
+			},
+			{
+				"name"			: "Scale",
+				"variable"		: "scale7",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 25,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "X-Position",
+				"variable"		: "xPosition7",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Y-Position",
+				"variable"		: "yPosition7",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Z-Distance",
+				"variable"		: "zDistance7",
+				"type"			: "slider",
+				"unit"			: "px",
+				"default"		: 30,
+				"min"			: 0,
+				"max"			: 300,
+				"integer"		: true
+			}
+		  ]
+		},
+		{
+		  "name": "Layer 8",
+		  "type": "section",
+		  "collapsed": true,
+		  "fields"		: [
+			{
+				"name"			: "Image",
+				"variable"		: "image8",
+				"type"			: "image"
+			},
+			{
+				"name"			: "Link (optional)",
+				"variable"		: "link8",
+				"type"			: "url",
+				"default"		: ""
+			},
+			{
+				"name"			: "Scale",
+				"variable"		: "scale8",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 25,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "X-Position",
+				"variable"		: "xPosition8",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Y-Position",
+				"variable"		: "yPosition8",
+				"type"			: "slider",
+				"unit"			: "%",
+				"default"		: 50,
+				"min"			: 0,
+				"max"			: 100,
+				"integer"		: true
+			},
+			{
+				"name"			: "Z-Distance",
+				"variable"		: "zDistance8",
+				"type"			: "slider",
+				"unit"			: "px",
+				"default"		: 30,
+				"min"			: 0,
+				"max"			: 300,
+				"integer"		: true
+			}
+		  ]
+		}
+      
+	]
+}
